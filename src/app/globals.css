@@ -3,19 +3,86 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 346 68% 97%; /* #FDF2F5 */
+  --foreground: 222.2 84% 4.9%; /* #111827 */
+  
+  --primary: 340 82% 52%; /* #E91E63 */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 346 68% 97%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  
+  --accent: 39 49% 61%; /* #C9A96E */
+  --accent-foreground: 0 0% 100%;
+  
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 10% 40%;
+  
+  --border: 340 20% 90%;
+  --input: 340 20% 90%;
+  --ring: 340 82% 52%;
+  
+  --radius: 0.75rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: hsl(var(--border));
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Smooth Scroll (Lenis) */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Luxury Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.text-luxury-gold {
+  color: #C9A96E;
+}
+
+.bg-luxury-pink {
+  background-color: #E91E63;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
 }

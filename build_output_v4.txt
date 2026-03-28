@@ -1,0 +1,33 @@
+
+> fashion-website@0.1.0 build
+> next build
+
+  ▲ Next.js 15.0.0
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/7) ...
+   Generating static pages (1/7) 
+   Generating static pages (3/7) 
+   Generating static pages (5/7) 
+ ✓ Generating static pages (7/7)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    9.38 kB         177 kB
+├ ○ /_not-found                          897 B           100 kB
+├ ○ /about                               196 B           168 kB
+├ ƒ /product/[id]                        2.62 kB         171 kB
+└ ○ /shop                                3.9 kB          172 kB
++ First Load JS shared by all            99.2 kB
+  ├ chunks/215-c2eae5c0541b6ed7.js       44.6 kB
+  ├ chunks/4bd1b696-a2eb2fa3c1532a91.js  52.6 kB
+  └ other shared chunks (total)          1.91 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
